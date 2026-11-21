@@ -1,0 +1,7 @@
+.env
+.env.*
+__pycache__/
+*.pyc
+openapi.json.tmp
+node_modules/
+vendor/

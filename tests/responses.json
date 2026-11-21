@@ -1,0 +1,348 @@
+[
+  {
+    "name": "stack success",
+    "kind": "stack",
+    "body": {
+      "results": [
+        {
+          "input": "HighLevel",
+          "status": "covered",
+          "match": {
+            "slug": "highlevel"
+          },
+          "candidates": []
+        }
+      ]
+    },
+    "ok": true
+  },
+  {
+    "name": "list envelope success",
+    "kind": "list",
+    "body": {
+      "data": []
+    },
+    "ok": true
+  },
+  {
+    "name": "document success",
+    "kind": "document",
+    "body": {
+      "data": {
+        "doc_type": "impressum",
+        "title": "Fixture",
+        "language": "de",
+        "format": "html",
+        "text": "Synthetic test content",
+        "meta": {
+          "content_hash": "fixture-hash",
+          "source": "fixture",
+          "jurisdiction": "DE",
+          "stand": null
+        }
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "null",
+    "kind": "stack",
+    "body": null,
+    "ok": false
+  },
+  {
+    "name": "array",
+    "kind": "stack",
+    "body": [],
+    "ok": false
+  },
+  {
+    "name": "missing results",
+    "kind": "stack",
+    "body": {},
+    "ok": false
+  },
+  {
+    "name": "empty results",
+    "kind": "stack",
+    "body": {
+      "results": []
+    },
+    "ok": false
+  },
+  {
+    "name": "unknown status",
+    "kind": "stack",
+    "body": {
+      "results": [
+        {
+          "input": "HighLevel",
+          "status": "surprise",
+          "candidates": []
+        }
+      ]
+    },
+    "ok": false
+  },
+  {
+    "name": "missing covered match",
+    "kind": "stack",
+    "body": {
+      "results": [
+        {
+          "input": "HighLevel",
+          "status": "covered",
+          "candidates": []
+        }
+      ]
+    },
+    "ok": false
+  },
+  {
+    "name": "wrong input",
+    "kind": "stack",
+    "body": {
+      "results": [
+        {
+          "input": "Other",
+          "status": "not_covered",
+          "candidates": []
+        }
+      ]
+    },
+    "ok": false
+  },
+  {
+    "name": "missing candidates",
+    "kind": "stack",
+    "body": {
+      "results": [
+        {
+          "input": "HighLevel",
+          "status": "ambiguous"
+        }
+      ]
+    },
+    "ok": false
+  },
+  {
+    "name": "error envelope",
+    "kind": "stack",
+    "body": {
+      "results": [
+        {
+          "input": "HighLevel",
+          "status": "covered",
+          "match": {
+            "slug": "highlevel"
+          },
+          "candidates": []
+        }
+      ],
+      "error": {}
+    },
+    "ok": false
+  },
+  {
+    "name": "list scalar",
+    "kind": "list",
+    "body": {
+      "data": "bad"
+    },
+    "ok": false
+  },
+  {
+    "name": "list missing data",
+    "kind": "list",
+    "body": {},
+    "ok": false
+  },
+  {
+    "name": "document missing meta",
+    "kind": "document",
+    "body": {
+      "data": {}
+    },
+    "ok": false
+  },
+  {
+    "name": "document invalid doc_type",
+    "kind": "document",
+    "body": {
+      "data": {
+        "doc_type": "dse",
+        "title": "Fixture",
+        "language": "de",
+        "format": "html",
+        "text": "Synthetic test content",
+        "meta": {
+          "content_hash": "fixture-hash",
+          "source": "fixture",
+          "jurisdiction": "DE",
+          "stand": null
+        }
+      }
+    },
+    "ok": false
+  },
+  {
+    "name": "document invalid language",
+    "kind": "document",
+    "body": {
+      "data": {
+        "doc_type": "impressum",
+        "title": "Fixture",
+        "language": "en",
+        "format": "html",
+        "text": "Synthetic test content",
+        "meta": {
+          "content_hash": "fixture-hash",
+          "source": "fixture",
+          "jurisdiction": "DE",
+          "stand": null
+        }
+      }
+    },
+    "ok": false
+  },
+  {
+    "name": "document invalid format",
+    "kind": "document",
+    "body": {
+      "data": {
+        "doc_type": "impressum",
+        "title": "Fixture",
+        "language": "de",
+        "format": "text",
+        "text": "Synthetic test content",
+        "meta": {
+          "content_hash": "fixture-hash",
+          "source": "fixture",
+          "jurisdiction": "DE",
+          "stand": null
+        }
+      }
+    },
+    "ok": false
+  },
+  {
+    "name": "document invalid text",
+    "kind": "document",
+    "body": {
+      "data": {
+        "doc_type": "impressum",
+        "title": "Fixture",
+        "language": "de",
+        "format": "html",
+        "text": null,
+        "meta": {
+          "content_hash": "fixture-hash",
+          "source": "fixture",
+          "jurisdiction": "DE",
+          "stand": null
+        }
+      }
+    },
+    "ok": false
+  },
+  {
+    "name": "document invalid title",
+    "kind": "document",
+    "body": {
+      "data": {
+        "doc_type": "impressum",
+        "title": [],
+        "language": "de",
+        "format": "html",
+        "text": "Synthetic test content",
+        "meta": {
+          "content_hash": "fixture-hash",
+          "source": "fixture",
+          "jurisdiction": "DE",
+          "stand": null
+        }
+      }
+    },
+    "ok": false
+  },
+  {
+    "name": "document invalid meta content_hash",
+    "kind": "document",
+    "body": {
+      "data": {
+        "doc_type": "impressum",
+        "title": "Fixture",
+        "language": "de",
+        "format": "html",
+        "text": "Synthetic test content",
+        "meta": {
+          "content_hash": null,
+          "source": "fixture",
+          "jurisdiction": "DE",
+          "stand": null
+        }
+      }
+    },
+    "ok": false
+  },
+  {
+    "name": "document invalid meta source",
+    "kind": "document",
+    "body": {
+      "data": {
+        "doc_type": "impressum",
+        "title": "Fixture",
+        "language": "de",
+        "format": "html",
+        "text": "Synthetic test content",
+        "meta": {
+          "content_hash": "fixture-hash",
+          "source": false,
+          "jurisdiction": "DE",
+          "stand": null
+        }
+      }
+    },
+    "ok": false
+  },
+  {
+    "name": "document invalid meta jurisdiction",
+    "kind": "document",
+    "body": {
+      "data": {
+        "doc_type": "impressum",
+        "title": "Fixture",
+        "language": "de",
+        "format": "html",
+        "text": "Synthetic test content",
+        "meta": {
+          "content_hash": "fixture-hash",
+          "source": "fixture",
+          "jurisdiction": [],
+          "stand": null
+        }
+      }
+    },
+    "ok": false
+  },
+  {
+    "name": "document invalid meta stand",
+    "kind": "document",
+    "body": {
+      "data": {
+        "doc_type": "impressum",
+        "title": "Fixture",
+        "language": "de",
+        "format": "html",
+        "text": "Synthetic test content",
+        "meta": {
+          "content_hash": "fixture-hash",
+          "source": "fixture",
+          "jurisdiction": "DE",
+          "stand": 42
+        }
+      }
+    },
+    "ok": false
+  }
+]
